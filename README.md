@@ -1,34 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
+## ディレクトリ構成
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+src/
+├─ components/
+│  ├─ elements/
+│  │  └─ Button
+│  │     ├─ Button.stories.tsx
+│  │     └─ Button.tsx
+│  └─ layouts/
+│     └─ Header
+│        └─ Header.tsx
+├─ pages/
+├─ features/
+│  └─ /awesome-feature
+│     ├─ api/
+│　　　　　└─ getSomethingInfo.ts
+│     ├─ const/
+│     ├─ components/
+│        └─  Course.tsx
+│     ├─ hooks/
+│        └─ useCourse.ts
+│     └─ types/
+│        └─ index.ts
+├─ config/
+├─ const/
+├─ hooks/
+├─ libs/
+└─ types/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### components
+アプリケーション全体で使用するコンポーネントを配置する。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### components/element
+アプリケーション全体で使用する共通コンポーネントを配置する。
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### components/layouts
+アプリケーション全体で使うレイアウトコンポーネントを配置する。
+例えば、HeaderやFooterなど。
 
-## Learn More
+### pages
+Nextのページコンポーネントを配置する。
 
-To learn more about Next.js, take a look at the following resources:
+### features
+ある特定の機能でしか使わないapiへのアクセサや定数、型、hooks、コンポーネントなど全てを詰め込む。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### config
+アプリケーション全体の設定を置く。Tailwindのthemeの設定など。
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### const
+アプリケーション全体の定数を配置する。
 
-## Deploy on Vercel
+### libs
+ライブラリのラッパーや設定済みのインスタンスをexportするファイルなどを置く。axios関係など。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### types
+アプリ全体で使用する型を配置する。
