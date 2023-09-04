@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "jest --watch",
+    "test:ci": "jest",
     "lint": "next lint",
     "format": "prettier --write ./src/app",
     "prepare": "husky install"
