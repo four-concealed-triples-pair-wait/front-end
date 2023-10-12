@@ -1,3 +1,13 @@
+## 事前準備
+nodeのversionを18以上にする。<br>
+プロジェクトルートディレクトリで以下のコマンド
+```bash
+$ npm install
+```
+開発サーバの立ち上げ
+```bash
+$ npm run dev
+```
 ## ディレクトリ構成
 
 ```bash
